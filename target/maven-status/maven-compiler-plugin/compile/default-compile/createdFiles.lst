@@ -5,3 +5,5 @@ com/webstartrek/music/music/PopularProducts.class
 com/webstartrek/music/music/AppRestConfiguration.class
 com/webstartrek/music/music/ProductDetails.class
 com/webstartrek/music/music/ProductService.class
+com/webstartrek/music/music/ShoppingCart.class
+com/webstartrek/music/music/ShoppingCartLine.class
