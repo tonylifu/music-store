@@ -56,3 +56,29 @@ body > footer > p {
     float: left;
     padding-right: 1em;
 }
+
+.shoppingcart-table {
+    width: 100%;
+}
+
+.shoppingcart-header {
+    padding: 0.25em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.shoppingcart-col-name {
+    padding: 0.25em;
+    text-align: left;
+}
+
+.shoppingcart-col-price, .shoppingcart-col-quantity, .shoppingcart-col-amount {
+    padding: 0.25em;
+    text-align: right;
+}
+
+.shoppingcart-footer {
+    padding: 0.25em;
+    font-weight: bold;
+    text-align: right;
+}
