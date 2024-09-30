@@ -10,6 +10,22 @@ a:hover, a:active {
     color: #c3de96;
 }
 
+input {
+    background-color: #808080;
+    color: white;
+    border: 1px solid black;
+    padding: 0.25em;
+}
+
+input[readonly] {
+    color: #c0c0c0;
+}
+
+input[type="submit"], input[type="button"] {
+    border-radius: 0.25em;
+    padding: 0.25em 0.75em;
+}
+
 body > header {
     background-color: #c43b0e;
     color: #e5e5e5;
@@ -41,4 +57,8 @@ body > footer {
 .shoppingcart-footer {
     background-color: #1f778d;
     color: white;
+}
+
+.validation-messages {
+    color: yellow;
 }
