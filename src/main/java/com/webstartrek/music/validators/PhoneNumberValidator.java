@@ -1,4 +1,4 @@
-package com.webstartrek.music.validator;
+package com.webstartrek.music.validators;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
@@ -16,7 +16,7 @@ public class PhoneNumberValidator implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         String phoneNumber = (String) value;
-        if (phoneNumber != null && !phoneNumber.equals("")) {
+        if (phoneNumber != null && !phoneNumber.isEmpty()) {
             checkPattern(phoneNumber);
             checkAreaCode(phoneNumber.substring(0, 3));
             checkOfficeCode(phoneNumber.substring(4, 7));
