@@ -1,4 +1,4 @@
-package com.webstartrek.music;
+package com.webstartrek.music.models;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;

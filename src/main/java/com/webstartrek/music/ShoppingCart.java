@@ -1,5 +1,7 @@
 package com.webstartrek.music;
 
+import com.webstartrek.music.models.Product;
+
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -62,6 +64,12 @@ public class ShoppingCart implements Serializable {
                 decrementTotalQuantityAndAmount(product.getPrice());
             }
         }
+    }
+
+    public void empty() {
+        lines.clear();
+        totalQuantity = 0;
+        totalAmount = BigDecimal.ZERO;
     }
 
     private void incrementTotalQuantityAndAmount(BigDecimal productPrice) {

@@ -10,11 +10,16 @@ a:hover, a:active {
     color: #c3de96;
 }
 
-input {
+input, select {
     background-color: #808080;
     color: white;
     border: 1px solid black;
     padding: 0.25em;
+}
+
+option {
+    background-color: #808080;
+    color: white;
 }
 
 input[readonly] {
@@ -31,7 +36,7 @@ body > header {
     color: #e5e5e5;
 }
 
-body > section {
+body > section, body > form > section {
     background-color: #606060;
     color: white;
 }

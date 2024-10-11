@@ -1,5 +1,7 @@
 package com.webstartrek.music;
 
+import com.webstartrek.music.models.Product;
+
 import java.math.BigDecimal;
 
 public class ShoppingCartLine {

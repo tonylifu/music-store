@@ -1,5 +1,6 @@
 package com.webstartrek.music;
 
+import com.webstartrek.music.models.Product;
 import lombok.Getter;
 
 import javax.annotation.PostConstruct;

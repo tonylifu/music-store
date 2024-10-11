@@ -1,5 +1,7 @@
 package com.webstartrek.music;
 
+import com.webstartrek.music.models.User;
+
 import javax.enterprise.context.ApplicationScoped;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

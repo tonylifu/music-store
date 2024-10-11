@@ -11,13 +11,19 @@
         <ui:insert name="product-description">
             <p>Product description.</p>
         </ui:insert>
-        <p>Price: $ #{product.price} - <h:commandLink
-                action="#{shoppingCart.addProduct(product)}">Add to cart</h:commandLink></p>
+        <p>Price:
+            <h:outputText value="#{product.price}">
+                <f:convertNumber type="currency" currencySymbol="$"/>
+            </h:outputText>
+            -
+            <h:commandLink action="#{shoppingCart.addProduct(product)}">
+                <f:ajax render="panel-top-section"/>
+                Add to cart
+            </h:commandLink></p>
         <p>
-            <h:outputLink value="product-details.xhtml">
+            <h:link value="Product Details" outcome="product-details">
                 <f:param name="productId" value="#{product.id}"/>
-                Product Details
-            </h:outputLink>
+            </h:link>
         </p>
     </section>
 </ui:composition>
