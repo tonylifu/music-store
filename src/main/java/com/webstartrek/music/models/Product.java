@@ -1,4 +1,4 @@
-package com.webstartrek.music;
+package com.webstartrek.music.models;
 
 import lombok.Getter;
 

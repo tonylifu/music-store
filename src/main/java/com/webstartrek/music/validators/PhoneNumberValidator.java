@@ -1,5 +1,7 @@
 package com.webstartrek.music.validators;
 
+import com.webstartrek.music.models.PhoneNumber;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -8,25 +10,15 @@ import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 import java.util.regex.Pattern;
 
-@FacesValidator("com.webstartrek.music.PhoneNumber")
+@FacesValidator("com.webstartrek.music.validators.PhoneNumber")
 public class PhoneNumberValidator implements Validator {
-
-    private static final Pattern PHONE_NUMBER_PATTERN = Pattern.compile("[0-9]{3}-[0-9]{3}-[0-9]{4}");
 
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
-        String phoneNumber = (String) value;
-        if (phoneNumber != null && !phoneNumber.isEmpty()) {
-            checkPattern(phoneNumber);
-            checkAreaCode(phoneNumber.substring(0, 3));
-            checkOfficeCode(phoneNumber.substring(4, 7));
-        }
-    }
-
-    private void checkPattern(String phoneNumber) {
-        if (!PHONE_NUMBER_PATTERN.matcher(phoneNumber).matches()) {
-            throw new ValidatorException(
-                    new FacesMessage("Please enter a valid phone number of the form: 800-555-1234."));
+        PhoneNumber phoneNumber = (PhoneNumber) value;
+        if (phoneNumber != null) {
+            checkAreaCode(phoneNumber.getAreaCode());
+            checkOfficeCode(phoneNumber.getOfficeCode());
         }
     }
 

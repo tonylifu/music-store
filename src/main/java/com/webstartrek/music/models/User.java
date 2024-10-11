@@ -1,4 +1,4 @@
-package com.webstartrek.music;
+package com.webstartrek.music.models;
 
 import com.webstartrek.music.annotations.ValidEmailAddress;
 import com.webstartrek.music.annotations.ValidPhoneNumber;
@@ -31,8 +31,7 @@ public class User implements Serializable {
     @ValidEmailAddress
     private String emailAddress;
 
-    @ValidPhoneNumber
-    private String phoneNumber;
+    private PhoneNumber phoneNumber;
 
     @Past(message = "Your birth date must be in the past.")
     private Date birthDate;

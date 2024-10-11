@@ -1,5 +1,6 @@
 package com.webstartrek.music;
 
+import com.webstartrek.music.models.User;
 import lombok.Getter;
 
 import javax.faces.application.FacesMessage;
@@ -20,8 +21,11 @@ public class UserDetails implements Serializable {
     @Inject
     private UserManager userManager;
 
-    @Getter
     private User user;
+
+    public User getUser() {
+        return user;
+    }
 
     public void onload() {
         user = userManager.isSignedIn() ? userManager.getCurrentUser() : new User();
@@ -29,12 +33,5 @@ public class UserDetails implements Serializable {
 
     public String submit() {
         return userManager.save(user);
-    }
-
-    public void validateEmail(FacesContext context, UIComponent component, Object value) {
-        String emailAddress = (String) value;
-        if (emailAddress != null && !emailAddress.isEmpty() && !emailAddress.contains("@")) {
-            throw new ValidatorException(new FacesMessage("Please enter a valid e-mail address."));
-        }
     }
 }

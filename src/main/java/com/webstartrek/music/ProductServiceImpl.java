@@ -1,5 +1,7 @@
 package com.webstartrek.music;
 
+import com.webstartrek.music.models.Product;
+
 import javax.enterprise.context.ApplicationScoped;
 import java.math.BigDecimal;
 import java.util.ArrayList;
